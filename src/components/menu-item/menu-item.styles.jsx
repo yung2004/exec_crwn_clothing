@@ -34,7 +34,9 @@ export const MenuItemContainer = styled.div`
   }
 `;
 
-export const BackgroundImageContainer = styled.div`
+export const BackgroundImageContainer = styled.div.withConfig({
+  shouldForwardProp: prop => prop !== 'imageUrl'
+})`
   width: 100%;
   height: 100%;
   background-size: cover;
